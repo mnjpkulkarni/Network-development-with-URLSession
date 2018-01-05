@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     func fetchUrl(url : String){
         if let urlToServer = URL.init(string: url){
             let task = URLSession.shared.downloadTask(with: urlToServer, completionHandler: { (fileUrl, response, error) in
-                
+                ////URLSession.shared.dataTask -> For JSON response
                 if error != nil || fileUrl == nil {
                     //Error Handling
                 }
